@@ -8,3 +8,6 @@
 # Eclipse Project Files #
 .classpath
 .project
+
+# Maven target folder #
+target/
