@@ -35,6 +35,11 @@ public class CBIDemoServiceTest {
         final String str1 = "test1";
         final String str2 = "test2";
 
+        String actualResult;
+        // TODO how about assert before mock ?!
+        // actualResult = service.concatDBString();
+        // Assert.assertEquals(str1 + " + " + str2, actualResult);
+
         /**
          * <pre>
          * This Expectations is a record phase which will record what behavior you want 
@@ -58,14 +63,13 @@ public class CBIDemoServiceTest {
         };
 
         /**
-         * replay phase
+         * replay phase (including the implicit verify phase for mock expectation)
          */
-        String actualResult = service.concatDBString();
+        actualResult = service.concatDBString();
         /**
          * verify phase
          */
         Assert.assertEquals(str1 + " + " + str2, actualResult);
-        // TODO how about assert again ?!
-        // Assert.assertEquals(str1 + " + " + str2, actualResult);
+
     }
 }
