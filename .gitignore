@@ -11,3 +11,4 @@
 
 # Maven target folder #
 target/
+.settings/
